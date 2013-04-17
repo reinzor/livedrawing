@@ -10,5 +10,8 @@
     "jade": "*",
     "less-middleware": "*",
     "socket.io": "*"
+  },
+  "devDependencies": {
+    "uglify-js": "~2.2.5"
   }
 }
