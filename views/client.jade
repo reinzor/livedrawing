@@ -1,16 +1,8 @@
 doctype 5
 html
-  head
-    title client
-    
-  body
-    p client
-
-!!! 5
-html(lang='en')
     head
         meta(charset='utf-8')
-        title Draw it!
+        title LiveDrawing - NodeJS
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
         link(rel='stylesheet', href='/css/client.css')
         script(src='http://code.jquery.com/jquery.js')
@@ -19,43 +11,45 @@ html(lang='en')
     body
         .navbar.navbar-fixed-top
           .navbar-inner
-            .container
-              a.brand(href='#') Draw it!
-              ul.nav.pull-right
+              a.brand LiveDrawing
+              ul.nav.pull-right 
                 li.dropdown
-                  a.dropdown-toggle(href='#', data-toggle='dropdown')
+                  a.dropdown-toggle(data-toggle='dropdown')
                     i.icon-circle.icon-large
-                  ul.dropdown-menu(style='text-align: center;')
+                  ul.dropdown-menu
                     li
-                      a(href='#')
+                      a
                         i.icon-circle
                     li
-                      a(href='#')
+                      a
                         i.icon-circle.icon-large
                     li
-                      a(href='#')
+                      a
                         i.icon-circle.icon-2x
                 li.dropdown
-                  a.dropdown-toggle(href='#', data-toggle='dropdown')
+                  a.dropdown-toggle(data-toggle='dropdown')
                     i.icon-tint.icon-large
-                  ul.dropdown-menu(style='text-align: center;')
+                  ul.dropdown-menu
                     li
-                      a(href='#')
+                      a
                         i.icon-tint.icon-large(style='color: black;')
                     li
-                      a(href='#')
+                      a
                         i.icon-tint.icon-large(style='color: red;')
                     li
-                      a(href='#')
+                      a
                         i.icon-tint.icon-large(style='color: yellow;')
                     li
-                      a(href='#')
-                        i.icon-tint.icon-large(style='color: blue; width: 20px;')
+                      a
+                        i.icon-tint.icon-large(style='color: blue;')
+                    li
+                      a
+                        i.icon-tint.icon-large(style='color: green;')
                 li.divider-vertical
                 li
-                  a(href='#')
+                  a
                     i.icon-ok.icon-large.icon-white
                 li
-                  a(href='#')
+                  a
                     i.icon-refresh.icon-large
         canvas#canvas
