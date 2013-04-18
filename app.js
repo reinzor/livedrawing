@@ -37,9 +37,17 @@ var server = http.createServer(app).listen(app.get('port'), function(){
 
 var io = require('socket.io').listen(server);
 
-io.sockets.on('connection', function (socket) {
-  socket.emit('news', { hello: 'world' });
-  socket.on('my other event', function (data) {
-    console.log(data);
+var drawboards = io
+  .of('/drawboard')
+  .on('connection', function (socket) {
+    console.log('drawboard online');
   });
+
+var clients = io
+  .of('/client')
+  .on('connection', function (socket) {
+    console.log('client online');
+    socket.on('message', function (data) {
+      drawboards.emit('message', data);
+    });
 });
