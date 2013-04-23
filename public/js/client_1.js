@@ -2,6 +2,8 @@ $(document).ready(function () {
     lineWidth = 8;
     lineColor = 'black';
     
+    window.scrollTo(0, 1);
+    
     initialize(); 
     
     $(".lineWidth").find("a").click(function() {
