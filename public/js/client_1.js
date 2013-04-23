@@ -19,6 +19,11 @@ $(document).ready(function () {
         $('canvas')[0].width = $('canvas')[0].width;
     });
     
+    $(".icon-save").parent("a").click(function() {
+        var imageURL = $('canvas')[0].toDataURL();
+        window.location.href = imageURL;
+    });
+    
 });
  
 // works out the X, Y position of the click inside the canvas from the X, Y position on the page
@@ -40,9 +45,12 @@ function initialize() {
     var Canvas = document.getElementById("canvas");
     var context = Canvas.getContext("2d");
     context.lineCap = 'round';
+    context.lineJoin = 'round';
 
     Canvas.width = $(window).innerWidth();
     Canvas.height = $(window).innerHeight()-41;
+    
+    console.log(context);
 
     // This will be defined on a TOUCH device such as iPad or Android, etc.
     var is_touch_device = 'ontouchstart' in document.documentElement;
