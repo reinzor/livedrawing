@@ -5,9 +5,10 @@ html
         title LiveDrawing - NodeJS
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
         link(rel='stylesheet', href='/css/client.css')
+        script(src='/socket.io/socket.io.js')
         script(src='http://code.jquery.com/jquery.js')
         script(src='/js/bootstrap.min.js')
-        script(src='/js/client.js')
+        script(src='/js/client_1.js')
     body
         .navbar.navbar-fixed-top
           .navbar-inner
@@ -51,4 +52,4 @@ html
                 li
                   a(href='#')
                     i.icon-refresh.icon-large
-        canvas#canvas
+        canvas
