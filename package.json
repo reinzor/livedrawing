@@ -9,8 +9,7 @@
     "express": "3.2.0",
     "jade": "*",
     "less-middleware": "*",
-    "socket.io": "*",
-    "qrcode": "*"
+    "socket.io": "*"
   },
   "devDependencies": {
     "uglify-js": "~2.2.5"
