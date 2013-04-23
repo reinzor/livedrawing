@@ -14,36 +14,36 @@ html
           .navbar-inner
               ul.nav.pull-right 
                 li.dropdown
-                  a.dropdown-toggle(href='#', data-toggle='dropdown')
-                    i.icon-circle.icon-large
-                  ul.dropdown-menu
+                  a.dropdown-toggle(href='#', data-toggle='dropdown').currentLineWidth
+                    i.icon-circle(style='font-size: 8pt;')
+                  ul.dropdown-menu.lineWidth 
                     li
-                      a(href='#')
-                        i.icon-circle
+                      a(href='#',lineWidth='5')
+                        i.icon-circle(style='font-size: 2pt;')
                     li
-                      a(href='#')
-                        i.icon-circle.icon-large
+                      a(href='#',lineWidth='10')
+                        i.icon-circle(style='font-size: 8pt;')
                     li
-                      a(href='#')
-                        i.icon-circle.icon-2x
+                      a(href='#',lineWidth='20')
+                        i.icon-circle(style='font-size: 12pt;')
                 li.dropdown
-                  a.dropdown-toggle(href='#', data-toggle='dropdown')
+                  a.dropdown-toggle(href='#', data-toggle='dropdown').currentLineColor
                     i.icon-tint.icon-large
-                  ul.dropdown-menu
+                  ul.dropdown-menu.lineColor
                     li
-                      a(href='#')
+                      a(href='#',lineColor='black')
                         i.icon-tint.icon-large(style='color: black;')
                     li
-                      a(href='#')
+                      a(href='#',lineColor='red')
                         i.icon-tint.icon-large(style='color: red;')
                     li
-                      a(href='#')
+                      a(href='#',lineColor='yellow')
                         i.icon-tint.icon-large(style='color: yellow;')
                     li
-                      a(href='#')
+                      a(href='#',lineColor='blue')
                         i.icon-tint.icon-large(style='color: blue;')
                     li
-                      a(href='#')
+                      a(href='#',lineColor='green')
                         i.icon-tint.icon-large(style='color: green;')
                 li.divider-vertical
                 li
@@ -52,4 +52,4 @@ html
                 li
                   a(href='#')
                     i.icon-refresh.icon-large
-        canvas
+        canvas#canvas
