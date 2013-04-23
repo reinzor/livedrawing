@@ -39,6 +39,7 @@ function initialize() {
     // get references to the canvas element as well as the 2D drawing context
     var Canvas = document.getElementById("canvas");
     var context = Canvas.getContext("2d");
+    context.lineCap = 'round';
 
     Canvas.width = $(window).innerWidth();
     Canvas.height = $(window).innerHeight()-41;
@@ -50,9 +51,13 @@ function initialize() {
         // create a drawer which tracks touch movements
         var drawer = {
             isDrawing: false,
-            touchstart: function (coors) {			
+            touchstart: function (coors) {	
                 context.beginPath();
-                context.lineCap = 'round';
+    			context.arc(coors.x, coors.y, lineWidth/2, 0, 2 * Math.PI, true); 
+                context.closePath();
+				context.fill();
+                
+                context.beginPath();
                 context.lineWidth = lineWidth;
                 context.strokeStyle = lineColor;
                 
@@ -117,11 +122,15 @@ function initialize() {
         // draw a line to wherever the mouse moves to
         $("#canvas").mousedown(function (mouseEvent) {
             var position = getPosition(mouseEvent, Canvas);
+            context.beginPath();
+            context.arc(position.X, position.Y, lineWidth/2, 0, 2 * Math.PI, true); 
+            context.closePath();
+            context.fill();
 
             context.moveTo(position.X, position.Y);
+            
             context.beginPath();
             context.lineWidth = lineWidth;
-            context.lineCap = 'round';
             context.strokeStyle = lineColor;
 
             // attach event handlers
