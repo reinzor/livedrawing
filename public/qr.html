@@ -3,14 +3,27 @@
 		<title>qrcode test</title>
 		<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="js/node-qrcode/qrcode.js"></script>
+		<script type="text/javascript" src="js/node-qrcode/qrcapacitytable.js"></script>
+		<script type="text/javascript" src="js/node-qrcode/qrcode-draw.js"></script>
 		<script type="text/javascript">
-			console.log('hoi');
+			$(document).ready(function(){
+
+				var qrcodedraw = new QRCode.QRCodeDraw();
+
+				qrcodedraw.draw($('#test')[0],"test text omgomgomg!", function(error,canvas){
+					if(error){
+						return console.log('Error =( ',error);
+					}
+					console.log('success!');
+				});
+
+			});
 		</script>
 	</head>
 	<body>
 		<div>
 			<h1>Test</h1>
-			<textarea id="log" rows="20" cols="50"></textarea>
+			<canvas id="test"></canvas>
 		</div>
 	</body>
 </html>

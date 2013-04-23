@@ -7,7 +7,8 @@ the qrcode lib sets strange values for QRErrorCorrectLevel having to do with mas
 the maximum string length for error correct level H is 1273 characters long.
 */
 
-exports.QRCapacityTable = [
+// wrapper so browsers don't complain
+var QRVersionCapacityTable = [
 [17,14,11,7]
 ,[32,26,20,14]
 ,[53,42,32,24]

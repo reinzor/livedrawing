@@ -15,8 +15,10 @@
 *
 */
 
-var QRCodeLib = require('./qrcode.js');
-var QRVersionCapacityTable = require('./qrcapacitytable.js').QRCapacityTable;
+// wrapper so browsers don't complain
+var QRCode = (function(){
+var exports = {};
+
 var QRCode = QRCodeLib.QRCode;
 
 exports.QRCodeDraw = QRCodeDraw;
@@ -267,3 +269,5 @@ QRCodeDraw.prototype = {
   }
 };
 
+return exports;
+})(); // end wrapper

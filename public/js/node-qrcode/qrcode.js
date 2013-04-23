@@ -33,6 +33,10 @@
 // QRCode
 //---------------------------------------------------------------------
 
+// wrapper so browsers don't complain
+var QRCodeLib = (function(){
+var exports = {};
+
 exports.QRCode = QRCode;
 
 var QRDataArray = (typeof Uint32Array == 'undefined'?Uint32Array:Array);
@@ -1164,3 +1168,6 @@ QRBitBuffer.prototype = {
 		this.length++;
 	}
 };
+
+return exports;
+})(); // end wrapper
