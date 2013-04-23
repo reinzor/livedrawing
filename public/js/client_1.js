@@ -53,6 +53,7 @@ function initialize() {
             isDrawing: false,
             touchstart: function (coors) {	
                 context.beginPath();
+                context.fillStyle = lineColor;
     			context.arc(coors.x, coors.y, lineWidth/2, 0, 2 * Math.PI, true); 
                 context.closePath();
 				context.fill();
@@ -123,6 +124,7 @@ function initialize() {
         $("#canvas").mousedown(function (mouseEvent) {
             var position = getPosition(mouseEvent, Canvas);
             context.beginPath();
+            context.fillStyle = lineColor;
             context.arc(position.X, position.Y, lineWidth/2, 0, 2 * Math.PI, true); 
             context.closePath();
             context.fill();
