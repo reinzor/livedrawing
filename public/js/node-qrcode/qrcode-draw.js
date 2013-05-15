@@ -16,15 +16,15 @@
 */
 
 // wrapper so browsers don't complain
-var QRCode = (function(){
-var exports = {};
+window["QRCode"] = (function(){
+var exports= {};
 
 var QRCode = QRCodeLib.QRCode;
 
-exports.QRCodeDraw = QRCodeDraw;
-exports.QRVersionCapacityTable = QRVersionCapacityTable;
-exports.QRErrorCorrectLevel = QRCodeLib.QRErrorCorrectLevel;
-exports.QRCode = QRCodeLib.QRCode;
+exports['QRCodeDraw'] = QRCodeDraw;
+exports['QRVersionCapacityTable'] = QRVersionCapacityTable;
+exports['QRErrorCorrectLevel'] = QRCodeLib.QRErrorCorrectLevel;
+exports['QRCode'] = QRCodeLib.QRCode;
 
 function QRCodeDraw(){}
 
@@ -268,6 +268,8 @@ QRCodeDraw.prototype = {
     }
   }
 };
+
+QRCodeDraw.prototype['draw'] = QRCodeDraw.prototype.draw;
 
 return exports;
 })(); // end wrapper

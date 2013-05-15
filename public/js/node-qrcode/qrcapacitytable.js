@@ -8,8 +8,8 @@ the maximum string length for error correct level H is 1273 characters long.
 */
 
 // wrapper so browsers don't complain
-var QRVersionCapacityTable = [
-[17,14,11,7]
+window['QRVersionCapacityTable'] = [
+ [17,14,11,7]
 ,[32,26,20,14]
 ,[53,42,32,24]
 ,[78,62,46,34]
