@@ -1,0 +1,30 @@
+extends layout
+
+append head
+  link(rel='stylesheet', href='/css/bootstrap.css')
+  link(rel='stylesheet', href='/css/home.css')
+  link(rel='stylesheet', href='/css/responsive.css')
+  script(src='/js/bootstrap.min.js')
+
+block body
+  .container
+    .masthead
+      h3.muted Live drawing!
+      .navbar
+        .navbar-inner
+          .container
+            ul.nav
+              li.active
+                a(href='#') Home
+              li
+                a(href='#') About
+              li
+                a(href='#') Downloads
+              li
+                a(href='#') More stuff
+              li
+                a(href='#') Contact
+    .jumbotron
+      h1 Live drawing!!!
+      p.lead Collaborative drawing made with socket.io
+      a.btn.btn-large.btn-success(href='#') Start a drawingboard now!

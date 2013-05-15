@@ -1,7 +1,8 @@
-doctype 5
-html
-  head
-    title drawboard
-    link(rel='stylesheet', href='/stylesheets/drawboard.css')
-  body
-    p drawboard
+extends layout
+
+append head
+  link(rel='stylesheet', href='/css/drawboard.css')
+  script(src='/socket.io/socket.io.js')
+  script(src='/js/bootstrap.min.js')
+block body
+  p Hello World
